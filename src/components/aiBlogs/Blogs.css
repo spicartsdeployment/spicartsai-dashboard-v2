@@ -1,0 +1,169 @@
+/* Blog Page */
+.blog-container {
+    color: white;
+    padding: 4rem 6rem;
+    text-align: center;
+}
+
+/* Header */
+.blog-header {
+    margin-bottom: 30px;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.blog-header p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.highlight {
+    color: #1fd5f9;
+    font-weight: 300;
+}
+
+/* Introduction */
+.blog-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Sections */
+.blog-section {
+    margin-top: 50px;
+}
+
+.blog-section h2 {
+    font-size: 1.6rem;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    color: #1fd5f9;
+    font-size: 26px;
+}
+
+/* Trending Topics */
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.trending-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.trending-card h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.trending-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.trending-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #1fd5f9;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.trending-card a:hover {
+    text-decoration: underline;
+}
+
+/* Featured Articles */
+.featured-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.featured-list li {
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: left;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.featured-list li svg {
+    color: #1fd5f9;
+}
+
+/* CTA Section */
+.blog-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.blog-cta h2 {
+    font-size: 1.6rem;
+}
+
+.blog-cta p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #1fd5f9;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #17b0d7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1rem;
+    }
+    .blog-header h1 {
+        font-size: 1.6rem;
+    }
+    .blog-header p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    .trending-grid {
+        grid-template-columns: 1fr;
+    }
+}

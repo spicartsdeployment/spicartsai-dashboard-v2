@@ -1,0 +1,146 @@
+/* Global Styles */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+  } */
+  
+  .ai-comms-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6rem 8rem 4rem 8rem;
+  }
+  
+  .ai-comms-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .ai-comms-header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .ai-comms-header p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .ai-comms-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .ai-comms-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Desktop Layout */
+  .ai-comms-speech-container,
+  .ai-comms-smart-container {
+    flex: 1 1 20%;
+    height: 40%;
+    border: 1px solid #555;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .ai-comms-image-container {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ai-comms-image {
+    max-width: 70%;
+    height: auto;
+  }
+  
+  .ai-comms-connected-intelligence-container {
+    width: 60%;
+    border: 1px solid #555;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .ai-comms-title {
+    color: cyan;
+    font-size: 18px;
+    margin: 0 0 20px;
+  }
+  
+  .ai-comms-speech-container p,
+  .ai-comms-smart-container p,
+  .ai-comms-connected-intelligence-container p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .ai-comms-wrapper {
+      padding: 3rem 1rem;
+      /* min-height: 100vh; */
+    }
+  
+    .ai-comms-main {
+      flex-direction: column;
+    }
+  
+    .ai-comms-container {
+      flex-direction: column;
+      flex-wrap: initial;
+    }
+  
+    .ai-comms-speech-container,
+    .ai-comms-image-container,
+    .ai-comms-smart-container,
+    .ai-comms-connected-intelligence-container {
+      flex: 1 1 100%; /* All containers take full width on mobile */
+      margin-bottom: 20px; /* Add spacing between containers */
+    }
+  
+    .ai-comms-image-container {
+      order: 1; /* Image is first on mobile */
+    }
+
+    .ai-comms-image {
+        max-width: 90%;
+      }
+
+      .ai-comms-header h1 {
+        font-size: 1.6rem;
+      }
+      .ai-comms-header p {
+        font-size: 0.9rem;
+      }
+  
+    .ai-comms-speech-container {
+      order: 2; /* Speech is second on mobile */
+    }
+  
+    .ai-comms-smart-container {
+      order: 3; /* Smart is third on mobile */
+    }
+  
+    .ai-comms-connected-intelligence-container {
+        width: unset;
+      order: 4; /* Connected Intelligence is fourth on mobile */
+    }
+  }

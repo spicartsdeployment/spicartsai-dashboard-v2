@@ -1,0 +1,677 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background-color: #070707;
+  color: #fff;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  z-index: 100;
+}
+
+/* Navbar on scroll */
+.navbar.scrolled {
+  background-color: rgba(7, 7, 7, 0.8);
+  backdrop-filter: blur(5px);
+  padding: 10px 30px;
+  border-bottom: 1px solid #333;
+}
+
+/* Prevent content from being covered by fixed navbar */
+body {
+  margin-top: 80px;
+}
+
+/* Logo */
+.logo-con {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo {
+  /* filter: invert(1) brightness(2); */
+  height: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.logo-con:hover .logo {
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+/* Navigation Links - Desktop */
+.nav-links {
+  display: flex;
+  align-items: center;
+  /* gap: 25px; */
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Sign Up & Request a Demo - Desktop */
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-req-link {
+  text-decoration: none;
+
+  border: 1px solid transparent;
+
+  background:
+    linear-gradient(#000, #050505) padding-box,
+
+    linear-gradient(to right, #150797, #5dc6e9) border-box;
+  border-radius: 0.5rem;
+
+  padding: 7px 8px;
+  box-shadow:
+    0 0 10px rgba(21, 7, 151, 0.2),
+    0 0 10px rgba(93, 198, 233, 0.2),
+    0 0 10px rgba(93, 198, 233, 0.3);
+
+  transition: background 0.6s ease, color 0.3s ease;
+}
+
+.navbar-req-link:hover {
+
+
+  color: #fff;
+
+  background: linear-gradient(to right, #150797, #5dc6e9) padding-box,
+    linear-gradient(to right, #150797, #5dc6e9) border-box;
+}
+
+
+
+
+.signup-btn {
+  text-decoration: none;
+}
+
+/* Button Container */
+.navbar-button-container {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Button Styling */
+.navbar-button {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid #333; */
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-button:hover {
+  color: #fff;
+  /* border-color: #f8b400; */
+  background: linear-gradient(90deg, #150797, #5dc6e9);
+}
+
+/* Individual Text Styling */
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Start invisible */
+  animation: fade 8s infinite;
+  /* Continuous fade animation */
+  font-size: 16px;
+  transition: opacity 0.5s ease;
+}
+
+/* Initial Visibility for "Sign In" */
+.sign-in {
+  animation-delay: 0s;
+  /* Starts immediately */
+}
+
+/* Delay for "Sign Up" */
+.sign-up {
+  animation-delay: 4s;
+  /* Starts after "Sign In" finishes fading */
+}
+
+/* Fade Animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    /* Fully transparent */
+    z-index: 1;
+    /* Ensure proper stacking order */
+  }
+
+  10% {
+    opacity: 1;
+    /* Fully visible */
+    z-index: 2;
+    /* Bring to the front */
+  }
+
+  50% {
+    opacity: 1;
+    /* Stay visible */
+    z-index: 2;
+  }
+
+  60% {
+    opacity: 0;
+    /* Start fading out */
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+    /* Fully transparent */
+    z-index: 1;
+  }
+}
+
+/* Flyout Menu */
+.flyout {
+  position: absolute;
+  top: 100%;
+  left: -100px;
+  background-color: #060606;
+  /* border: 1px solid #888; */
+  border: 0.8px solid rgba(170, 170, 170, 0.2);
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  box-shadow: 0px 4px 8px rgba(1, 1, 1, 0.3);
+  width: 45rem;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  z-index: 210;
+  padding: 0px;
+  align-items: center;
+  height: 16rem;
+  gap: 10px;
+  /* justify-content: center; */
+
+  padding: 5px;
+}
+
+/* flyout rightcard*/
+.left-card {
+  width: 30%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  gap: 15px;
+  /* align-items: start;
+  justify-content: flex-start; */
+}
+
+.icon {
+  /* font-size: 3rem; */
+  font-size: 30px;
+  margin-right: 15px;
+  border: 0.8px solid rgba(170, 170, 170, 0.4);
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 0px;
+
+}
+
+
+.right-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* border: 0.8px solid rgba(170, 170, 170, 0.2); */
+  /* padding: 20px 10px; */
+  /* width: 26rem; */
+  width: 70%;
+  height: 16rem;
+  border-radius: 10px;
+  background-color: #0c0b0b;
+}
+
+/* Show flyout menu and tweak when parent is hovered */
+.nav-item:hover .flyout,
+.nav-item:hover .flyout-top-tweak {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-item {
+  position: relative;
+  font-weight: 200;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.nav-item .caret-icon {
+  font-size: 0.7rem;
+  transition: transform 0.5s ease, color 0.3s ease, fill 0.3s ease;
+  color: #fff;
+  fill: currentColor;
+}
+
+
+.nav-item:hover span,
+.nav-item:hover .caret-icon {
+  transform: rotate(180deg);
+  color: #1FD5F9;
+  fill: #1FD5F9;
+}
+
+.nav-item span {
+  font-weight: 400;
+}
+
+.demo-btn {
+  font-weight: 400;
+}
+
+
+.nav-item.active span,
+.nav-item.active .caret-icon {
+  color: #1FD5F9;
+  font-weight: 500;
+  /* Optional: Make active link bold */
+  position: relative;
+  fill: #1FD5F9;
+}
+
+
+/* Flyout Links */
+.flyout a,
+.flyout-resources a {
+  text-decoration: none;
+  color: #fff;
+  /* padding: 14px 35px; */
+  font-size: 0.95rem;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 3px;
+}
+
+/* Individual Links */
+.nav-link {
+  display: flex;
+  /* Align image and text horizontally */
+  align-items: center;
+  /* Vertically center align */
+  text-decoration: none;
+  /* Remove underline */
+  color: #962b2b;
+  /* Default text color */
+  font-size: 16px;
+  /* margin-bottom: 15px; */
+  padding: 10px 15px;
+  /* Spacing inside each link */
+  transition: color 0.3s ease;
+  /* margin-bottom: 5px; */
+  /* Smooth color transition on hover */
+}
+
+/* Hover Effect */
+.nav-link:hover {
+  color: #fff;
+  /* Pale blue color on hover */
+}
+
+/* Icons */
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  /* Space between icon and text */
+  border-radius: 4px;
+  /* Slightly rounded corners for the icons */
+  object-fit: cover;
+  /* Ensure images fit well within the dimensions */
+}
+
+/* Bounce-in Animation */
+.bounce-in {
+  animation: bounceIn 0.3s ease-out;
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flyout a:hover {
+  /* background: #f4f4f4; */
+  /* color: #f8b400; */
+  border-radius: 5px;
+  /* border: 0.8px solid rgba(170, 170, 170, 0.2); */
+  /* Gold accent color */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+
+  .mobile-nav,
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .logo-con {
+    margin-left: 0.8rem;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+  }
+
+  .navbar.scrolled {
+    padding: 8px 13px;
+  }
+
+  /* Hide Desktop Nav Links & Auth Links */
+  .nav-links,
+  .auth-links {
+    display: none;
+  }
+
+  /* Mobile Navigation */
+  .mobile-nav {
+    display: none;
+    height: 90vh;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: rgb(7, 7, 7);
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 20px;
+    border-top: 1px solid #333;
+    transition: right 0.5s ease-in-out;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+
+  .mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav a:hover {
+    color: #f8b400;
+    /* Gold accent color */
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin: 0.5rem 1rem 0 0;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  animation: fadeIn 1s ease;
+  animation-delay: 0.3s;
+  gap: 10px;
+  animation-fill-mode: both;
+  width: 100%;
+  /* height: 10rem; */
+  /* opacity: 0; */
+}
+
+.image-container {
+  /* margin-right: 0px; */
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0%;
+  width: 60%;
+  padding: 10px 8px;
+  /* height: 150px; */
+
+}
+
+.image-container img {
+  margin-top: 5px;
+  width: 100%;
+  height: 12rem;
+  border-radius: 5px;
+}
+
+.image-container p {
+  font-size: 0.8rem;
+}
+
+
+
+
+.content-container {
+  width: 40%;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center; */
+  align-items: center;
+  /* gap: 2px; */
+  /* justify-content: left;
+  align-items: last baseline; */
+  /* padding: 10px 8px;*/
+}
+
+.content-item {
+
+  width: 80%;
+  font-size: 0.8rem;
+  padding: 12px 10px;
+  border-radius: 7px;
+  border: 0.8px solid rgba(170, 170, 170, 0.2);
+  text-align: left;
+
+
+}
+
+.content-item span {
+  color: #fff;
+}
+
+.flyout-resources {
+  position: absolute;
+  top: 100%;
+  /* left: -100px; */
+  background-color: #060606;
+  /* border: 1px solid #888; */
+  border: 0.8px solid rgba(170, 170, 170, 0.2);
+
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 5px;
+  box-shadow: 0px 4px 8px rgba(1, 1, 1, 0.3);
+  width: 23rem;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  z-index: 210;
+  padding: 0px;
+  align-items: center;
+  /* height: 14rem; */
+  gap: 40px;
+  /* justify-content: center; */
+
+  padding: 5px;
+}
+
+.nav-item:hover .flyout-resources,
+.nav-item:hover .flyout-top-tweak {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.resources-nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 20px; */
+}
+
+.sub-nav-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 8px;
+  /* height: 20px; */
+}
+
+.sub-nav-card:hover {
+  /* transform: translateX(-10px);
+  transition: transform 0.3s ease; */
+  background: #0c0c0c;
+  padding: 10px 8px;
+  border-radius: 7px;
+}
+
+.sub-nav-card:hover .sub-nav-desc {
+  color: #1FD5F9;
+}
+
+
+
+.sub-nav-box {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.sub-nav-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  /* font-size: 1rem; */
+}
+
+.sub-nav-desc {
+  font-size: 0.7rem;
+  margin: 0;
+  /* padding: 0; */
+}
+
+.icon-box .icon-resources {
+  padding: 13px;
+  border: 1px solid rgb(36, 35, 35);
+  border-radius: 5px;
+  margin-right: 18px;
+
+}
+
+.subnav-link {
+  display: flex;
+  /* Align image and text horizontally */
+  align-items: center;
+  /* Vertically center align */
+  text-decoration: none;
+  /* Remove underline */
+  color: #962b2b;
+  /* Default text color */
+  font-size: 16px;
+  /* margin-bottom: 15px; */
+  /* padding: 5px 10px; */
+  /* Spacing inside each link */
+  transition: color 0.3s ease;
+  /* margin-bottom: 5px; */
+  /* Smooth color transition on hover */
+}
+
+/* Hover Effect */
+.subnav-link:hover {
+  color: #add8e6;
+  /* Pale blue color on hover */
+}
+
+.cActive {
+  padding: 10px 8px;
+}
+
+.cActive:hover {
+  background: #0c0c0c;
+  padding: 10px 8px;
+  border-radius: 7px;
+}

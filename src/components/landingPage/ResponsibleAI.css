@@ -1,0 +1,144 @@
+.responsible-ai-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 6rem 8rem 4rem 8rem;
+}
+
+.responsible-ai-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.responsible-ai-header h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.responsible-ai-header p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.responsible-ai-main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+.responsible-ai-container {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.responsible-ai-security-container {
+  width: 50%;
+  height: 30%;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  /* Space between sections */
+}
+
+.responsible-safety-continuum-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 0 2rem;
+}
+
+.responsible-ai-safety-container,
+.responsible-ai-continuum-container {
+  width: 46%;
+  height: 50%;
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.responsible-ai-title {
+  color: cyan;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.responsible-ai-container p,
+.responsible-ai-safety-container p,
+.responsible-ai-continuum-container p {
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .responsible-ai-security-container,
+  .responsible-ai-safety-container,
+  .responsible-ai-continuum-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .responsible-ai-safety-container {
+    margin-right: 0;
+  }
+}
+
+
+.responsible-ai-image-container {
+  flex: 1 1 30%;
+  width: 100%;
+  position: static;
+}
+
+.responsible-ai-image {
+  max-width: 90%;
+  height: auto;
+  /* min-height: 200px; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .responsible-ai-wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .responsible-ai-main {
+    flex-direction: column;
+  }
+
+  .responsible-ai-container {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  
+  .responsible-ai-security-container,
+  .responsible-ai-safety-container,
+  .responsible-ai-continuum-container,
+  .responsible-ai-image-container {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    width: unset;
+    padding: 20px;
+  }
+
+  
+.responsible-ai-header h1 {
+  font-size: 1.6rem;
+}
+
+.responsible-ai-header p {
+  font-size: 0.9rem;
+}
+}

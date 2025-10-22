@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="SpicArts AI offers advanced AI solutions, web and mobile development services." />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <title>SpicArts</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+
+
+  <style>
+    #progress {
+      position: fixed;
+      right: 1px;
+      top: 0;
+      width: 2px;
+      z-index: 201;
+    }
+
+    @media (max-width: 768px) {
+      #progress {
+        right: 1px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="progress"></div>
+  <button id="goToTop" onclick="scrollToTop()">&#8593;</button>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      const progress = document.getElementById("progress");
+      progress.style.height = scrollPercent + "%";
+
+      if (scrollPercent > 99) {
+        progress.style.background = "red";
+      } else {
+        progress.style.background = "#1FD5F9";
+      }
+
+      const goToTopBtn = document.getElementById("goToTop");
+      if (scrollTop > 200) {
+        goToTopBtn.classList.add("show");
+      } else {
+        goToTopBtn.classList.remove("show");
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+  <!-- Vite injects your main.jsx automatically -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

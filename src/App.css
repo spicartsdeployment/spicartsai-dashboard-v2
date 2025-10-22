@@ -1,0 +1,140 @@
+  .App {
+    text-align: center;
+  }
+
+  .main-container {
+    width: 100%;
+    max-width: 100vw;
+    background-color: #060606;
+    color: #fff !important;
+    margin: 2rem auto 0;
+    /* Adjusted for mobile */
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    /* overflow-x: hidden; */
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  #goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.4 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  #goToTop:hover {
+    background-color: #1fd5f9;
+    opacity: 1 !important;
+  }
+
+  #goToTop.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  /* ****************  Intersect Observer  **************** */
+  .scroll-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Box linear gradient */
+  /* .box-linear-gradient {
+  background: linear-gradient(90deg, #1fd5f9, #1fd5f9) padding-box,
+    linear-gradient(90deg, #1fd5f9, #1fd5f9) border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px;
+} */
+
+  .box-linear-gradient:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-45deg, #60efff 0%, #0061ff 100%);
+    transform: translate3d(9px, 20px, 0) scale(1);
+    filter: blur(15px);
+    opacity: var(0.9);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+  }
+
+  /* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+  .box-linear-gradient::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+  }
+
+
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .main-container {
+      /* margin: 1.5rem auto 0; */
+      padding: 15px;
+    }
+
+    /* For Webkit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* For Firefox */
+    html,
+    body {
+      scrollbar-width: none;
+    }
+
+    /* For Internet Explorer & Edge */
+    body {
+      -ms-overflow-style: none;
+    }
+  }

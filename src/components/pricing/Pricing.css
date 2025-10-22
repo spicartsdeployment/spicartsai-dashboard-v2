@@ -1,0 +1,97 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .pricing-wrapper {
+    min-height: 80vh;
+    background-color: #060606;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .pricing-container {
+    background: #0b0b0b;
+    padding: 2rem 0.8rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .pricing-container h1 {
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .pricing-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .highlight {
+    color: #0056d2;
+    font-weight: 600;
+  }
+  
+  .cta-intro {
+    margin-top: 1.8rem;
+  }
+  
+  .cta-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .cta-btn {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  
+  .cta-btn.outline {
+    background: transparent;
+    border: 2px solid #0056d2;
+    color: #0056d2;
+  }
+  
+  .cta-btn.ghost {
+    background: #eaf2ff;
+    color: #0056d2;
+  }
+  
+  .cta-btn:not(.outline):not(.ghost) {
+    background-color: #0056d2;
+    color: white;
+  }
+  

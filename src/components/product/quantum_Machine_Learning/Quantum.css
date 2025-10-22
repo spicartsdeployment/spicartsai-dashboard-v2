@@ -1,0 +1,327 @@
+.qunatum-container {
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.qunatum-hero-section {
+    min-height: 100vh;
+    padding: 8rem 0rem;
+    position: relative;
+    /* overflow: hidden; */
+    background: rgb(8, 6, 6);
+}
+
+.quatum-hero-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.quatum-hero-box .hero-contents {
+    /* display: flex; */
+    /* flex-direction: row; */
+    padding: 6rem 5rem 2.5rem 3rem;
+}
+
+.quantum-logo-box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.quatum-hero-box .hero-contents img {
+    width: 80px;
+    height: 80px;
+}
+
+.main-heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 75px;
+    line-height: 1.4;
+    font-family: 700;
+    margin: 0;
+    word-spacing: 17px;
+    letter-spacing: 5px;
+
+}
+
+
+.gradient-text {
+    background: linear-gradient(90deg, #4bbfe2, #d5ecf3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* for Firefox */
+    color: transparent;
+}
+
+
+
+
+.quantum-hero-img {
+    width: 250px;
+    height: 100px;
+}
+
+.quantum-hero-img img {
+    width: 100%;
+    margin-top: 250px;
+}
+
+.buttons-box {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 5rem 2.5rem 3rem;
+}
+
+.buttons-box button {
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+
+    background: linear-gradient(#000, #050505) padding-box,
+        /* inside background */
+        linear-gradient(to right, #150797, #5dc6e9) border-box;
+    /* color: black; */
+
+
+    padding: 8px 7px;
+    /* background: white; */
+    border-radius: 5px;
+}
+
+.buttons-box button:hover {
+    color: white;
+    /* background: #000; */
+}
+
+.qunatum-machine-section {
+    padding: 8rem 0rem;
+    position: relative;
+
+    background: rgb(8, 6, 6);
+    margin-top: 0;
+    z-index: 1;
+
+}
+
+.qunatum-machine-section .cards-conatiner {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.cards-conatiner .machine-card {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    background: white;
+    color: black;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    padding: 0px 7px;
+}
+
+.quantum-sub-heading .sub-text {
+    color: rgb(70, 68, 68);
+    padding: 0px 7px;
+    font-weight: 500;
+}
+
+.text-card-description {
+    color: black;
+    padding: 0px 7px;
+    font-weight: 500;
+}
+
+.machine-learning-content {
+    display: flex;
+    flex-direction: row;
+    /* height: 500px; */
+
+}
+
+.machine-learning-content .image-card {
+    width: 40%;
+}
+
+.machine-learning-content .text-card {
+    width: 55%;
+}
+
+
+.machine-learning-content .image-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 15px;
+    /* padding: 10px 8px; */
+
+}
+
+.tools-card {
+    background: linear-gradient(0deg, #44b6d8, #b3e7f7);
+    width: 450px;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+.qml-cards-section {
+    position: relative;
+    padding: 8rem 0rem;
+    overflow: hidden;
+    background: rgb(17, 17, 17);
+    display: flex;
+    justify-content: center;
+}
+
+.qml-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 10px;
+}
+
+.common-card {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    /* border: 1px solid white; */
+    padding: 0px;
+
+
+
+}
+
+.card-heading {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 10px;
+    color: black;
+
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.card-desc {
+    padding: 20px 15px;
+}
+
+.hybrid {
+    background: linear-gradient(100deg, rgb(233, 181, 85), rgb(243, 243, 169));
+
+}
+
+.quantum {
+    background: linear-gradient(100deg, #dff5e5, #78ffd6);
+    padding: 20px 15px;
+}
+
+.education {
+    background: linear-gradient(100deg, #f7bbbb, #f75656);
+    padding: 20px 15px;
+
+}
+
+.simulation {
+    background: linear-gradient(135deg, #d6e1e4, #5c9ef0);
+    padding: 20px 15px;
+}
+
+.qml-hero-card h2 {
+    word-spacing: 15px;
+    margin-top: -20px;
+    font-size: 3.6rem;
+    text-align: left;
+
+}
+
+.qml-hero-card h2 span {
+    font-weight: 600;
+}
+
+.description-card p {
+    margin-top: 100px;
+    padding: 25px 10px;
+
+}
+
+.description-card button {
+    margin-left: 410px;
+
+    margin-top: 130px;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    background: white;
+    padding: 12px 7px;
+    width: 130px;
+    border-radius: 10px;
+}
+
+.description-card button:hover {
+    color: white;
+    background: #000;
+}
+
+.simulation-card {
+    position: relative;
+    border: 1px solid transparent;
+    /* transparent border */
+    border-radius: 10px;
+    background:
+        linear-gradient(#000, #1a1919) padding-box,
+        /* inside background */
+        linear-gradient(to right, rgb(185, 185, 247), rgb(110, 160, 236)) border-box;
+    /* gradient border */
+}
+
+.Education-card {
+    position: relative;
+    border: 1px solid transparent;
+    /* transparent border */
+    border-radius: 10px;
+    background:
+        linear-gradient(#000, #1a1919) padding-box,
+        /* inside background */
+        linear-gradient(to right, rgb(216, 40, 40), rgb(207, 168, 83)) border-box;
+    /* gradient border */
+
+}
+
+.Hybrid-Quantum-card {
+    position: relative;
+    border: 1px solid transparent;
+    /* transparent border */
+    border-radius: 10px;
+    background:
+        linear-gradient(#000, #1a1919) padding-box,
+        /* inside background */
+        linear-gradient(to right, rgb(141, 79, 8), rgb(221, 107, 54)) border-box;
+
+}
+
+.Quantum-Algorithm-card {
+    position: relative;
+    border: 1px solid transparent;
+    /* transparent border */
+    border-radius: 10px;
+    background:
+        linear-gradient(#000, #1a1919) padding-box,
+        /* inside background */
+        linear-gradient(to right, rgb(46, 141, 8), rgb(33, 201, 61)) border-box;
+
+
+}
