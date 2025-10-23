@@ -1,8 +1,8 @@
 import React from 'react';
-import { quantum_content, quantum_Images } from '../../../utils/constants';
+import { quantum_content, quantum_Images, Quantum_Logo_Images } from '../../../utils/constants';
 import "./Quantum.css";
 import ScrollObserver from "../../../utils/commonComponents/intersectObserver/IntersectObserver"
-
+import { FaArrowRight } from 'react-icons/fa';
 const Quantum = () => {
     return (
 
@@ -18,31 +18,31 @@ const Quantum = () => {
                     <div className='quatum-hero-box'>
                         <div className='hero-contents'>
                             <div className='quantum-logo-box'>
-                                {/* {<img src={quantum_Images.voice} alt="" />} */}
+                                {<img src={Quantum_Logo_Images.quantumlogo} alt="" />}
 
-                                <h1 className='main-heading' style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}>THE FUTURE OF<br />
+                                <h1 className='main-heading' style={{ fontWeight: 700 }}>THE FUTURE OF<br />
                                     {/* <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}>QUANTUM RESEARCH</span><br />
                                 STARTS HERE */}
 
                                 </h1>
                             </div>
 
-                            <h1 className='main-heading gradient-text' style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}>QUANTUM RESEARCH</h1>
-                            <h1 className='main-heading' style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}>STARTS HERE</h1>
+                            <h1 className='main-heading gradient-text' style={{ fontWeight: 700 }}>QUANTUM RESEARCH</h1>
+                            <h1 className='main-heading' style={{ fontWeight: 700 }}>STARTS HERE</h1>
 
                         </div>
 
 
                         <div className='quantum-hero-img'>
 
-                            <img src={quantum_Images.aiagent} alt="" />
+                            <img src={Quantum_Logo_Images.sidelogo} alt="" />
                         </div>
                     </div>
-                    {/* <p className='text'>Join Our team</p> */}
+                    {<p className='text' >Join Our team</p>}
 
                     <div className='buttons-box'>
                         <button>Submit application</button>
-                        <button>Explore more</button>
+                        <button>Explore more <FaArrowRight size={12} /></button>
                     </div>
                 </section>
             </ScrollObserver>
@@ -76,7 +76,10 @@ const Quantum = () => {
                             </div>
                         </div>
                         <div className='tools-card'>
-                            <h2 className='sub-heading'> Tools & Tech Stack</h2></div>
+                            <h2 className='sub-heading'> Tools & Tech Stack</h2>
+                            <img className='tech-logos' src={Quantum_Logo_Images.techLogos} alt="" />
+                        </div>
+
 
                     </div>
 
@@ -144,8 +147,34 @@ const Quantum = () => {
                             </button>
                         </div>
 
+
                     </div>
+                    <div className='applications-card-conainer'>
+                        <h2 className='appliactions-heading'>Applications of <span>QML</span></h2>
+                        <p className='appli-desc'>QML is experimental- but the early wins are promising.</p>
+
+                        <div className='applications-cards-box'>
+                            <div className='application-card'>
+                                <h3>Logistics</h3>
+                                <p>Speeding up speech recognition and intent classification</p>
+                            </div>
+                            <div className='application-card'>
+                                <h3>Healthcare</h3>
+                                <p>Speeding up speech recognition and intent classification</p>
+                            </div>
+                            <div className='application-card'>
+                                <h3>Finance</h3>
+                                <p>Speeding up speech recognition and intent classification</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
+
+
+
+
+
             </ScrollObserver>
 
 

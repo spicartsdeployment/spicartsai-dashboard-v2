@@ -68,6 +68,12 @@ import aiagent from '../assets/images/Aiagent.png'
 import financial from '../assets/images/financial.png'
 import pattern from '../assets/images/pattern.png'
 
+import quantumlogo from '../assets/images/quantum-logo.png';
+import sidelogo from '../assets/images/quantum-side-pic.png';
+import techLogos from '../assets/images/tech-stack-logo.png';
+
+
+
 
 
 // Remove this
@@ -866,4 +872,9 @@ export const quantum_Images = {
   aiagent, voice
 }
 
-export const Quantum = [];
+export const Quantum_Logo_Images = {
+  quantumlogo,
+  sidelogo,
+  techLogos
+}
+  ;

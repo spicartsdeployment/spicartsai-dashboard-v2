@@ -309,7 +309,8 @@ const Navbar = (props) => {
                   </div>
 
                 </Link>
-                <Link
+
+                {/* <Link
                   onClick={scrollToTop}
                   to="/aboutus"
                   onMouseEnter={() => setCardActive("development")}
@@ -318,13 +319,13 @@ const Navbar = (props) => {
                   on
                 >
 
-                  {/* <img src={IMAGES.NAV_DEV_LOGO} alt="Development Icon" className="nav-icon" /> */}
+                  { <img src={IMAGES.NAV_DEV_LOGO} alt="Development Icon" className="nav-icon" /> }
 
                   <div className='sub-nav-card'>
 
                     <div className='icon-box'>
                       <FaInfoCircle size={12} className='icon-resources' />
-                      {/* <img src={IMAGES.NAV_DEV_LOGO} alt="Development Icon" className="nav-icon" /> */}
+                      {<img src={IMAGES.NAV_DEV_LOGO} alt="Development Icon" className="nav-icon" /> }
                     </div>
 
                     <div className='sub-nav-box'>
@@ -334,7 +335,7 @@ const Navbar = (props) => {
                     </div>
                   </div>
 
-                </Link>
+                </Link> */}
 
 
               </div>

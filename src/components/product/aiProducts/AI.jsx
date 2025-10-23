@@ -35,13 +35,13 @@ const AIProducts = () => {
                     >
                         Generative AI & AI Agents
                     </li>
-                    <li
+                    {/* <li
                         className={activePage === 'quantum-machine-learning' ? 'active' : ''}
                         onClick={() => setActivePage('quantum-machine-learning')}
 
                     >
                         Quantum Machine Learning
-                    </li>
+                    </li> */}
 
                 </ul>
             </nav>
@@ -244,7 +244,7 @@ const AIProducts = () => {
             )}
 
 
-            {activePage === "quantum-machine-learning" && (
+            {/* {activePage === "quantum-machine-learning" && (
                 <div className='quantum-machine-learning-container'>
                     <ScrollObserver>
                         <section className='quantum-hero-section voice-ai-hero'>
@@ -312,7 +312,7 @@ const AIProducts = () => {
 
 
                                         <div key={index} className={`usecase-image-box div${index + 1}`}>
-                                            {/* {<img src={usecase.img} alt='img' />} */}
+                                            
                                             <p>{usecase.desc}</p>
 
                                         </div>
@@ -338,7 +338,7 @@ const AIProducts = () => {
                 </div>
             )
 
-            }
+            } */}
         </div>
     );
 };
